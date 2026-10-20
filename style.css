@@ -1,0 +1,46 @@
+/* Reset chuẩn Box Model */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7fafc;
+}
+
+/* Khung lưới linh hoạt Flexbox */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;      /* Tự động nhảy dòng khi hết chỗ */
+  gap: 20px;            /* Khoảng cách đều giữa các thẻ */
+  padding: 20px;
+}
+
+/* Từng thẻ sản phẩm */
+.product-card {
+  flex: 1 1 calc(25% - 20px); /* Chia 4 cột và tự co giãn */
+  min-width: 220px;           /* Chiều rộng tối thiểu trước khi rớt dòng */
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px); /* Nhấc nhẹ thẻ khi rê chuột */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h4 {
+  margin-bottom: 8px;
+  color: #2d3748;
+}
+
+.product-card .price {
+  color: #e53e3e;
+  font-weight: bold;
+}
